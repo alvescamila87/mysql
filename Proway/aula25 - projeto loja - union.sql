@@ -1,4 +1,4 @@
-/* UNION (FULL ALTER JOIN) ou JOIN TABELAS DO PROJETO LOJA */
+/* UNION (FULL ALTER JOIN) TABELAS DO PROJETO LOJA */
 
 /* POPULAR DADOS */
 desc cad_funcionarios;
@@ -30,6 +30,10 @@ insert into cad_clientes (nome_cad_cliente, id_cad_cidade) values
 select nome_cad_cliente Pessoas , 'CLIENTE' Tipo from cad_clientes
 union
 select nome_cad_funcionario, 'FUNCIONÁRIO' Tipo from cad_funcionarios;
+
+select nome_cad_cidade Lugares, 'Cidade' Tipo from cad_cidades
+union
+select nome_cad_estado, 'Estado' from cad_estados;
 
 
 
